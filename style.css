@@ -8,12 +8,16 @@ body{
     font-family: 'Playpen sans', sans-serif;
     font-size: 16px;
 }
+/*CLASES*/
 .orange{
     color: rgb(218, 186, 47);
 }
 .negrita{
     font-weight: 600;
     color: rgb(81, 146, 199);
+}
+.txt-center{
+    text-align: center;
 }
 header{
     background-image: url(imagenes/img-inicio.jpg);
@@ -48,9 +52,6 @@ nav a{
 nav a:hover{
     color: rgb(218, 186, 47);
 }
-.txt-center{
-    text-align: center;
-}
 #txt-inicio{
     font-family: 'Knewave';
 }
@@ -72,35 +73,80 @@ nav a:hover{
 /**/
 #section-acerca{
     padding: 10px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 #txt-acerca{
     height: 70%;
     order:1;
+
+    text-overflow: ellipsis;
 }
 #img-acerca{
     height: 30%;
-    padding: 5px;
-    order:2;
-    display: grid;
+    padding: 10px;
+    order:2;  
+    text-align: center;
 }
 #img-acerca img{
-    
-    width: 60%;
-    height: 100%;
+    width: 50%;
+    max-width:100% ;
     max-height: 100%;
 }
+/**/
+#section-conoce{
+    min-height: 100vh;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 15% 85%;
+    
+}
+#subtitulo-conoce{
+    grid-area: 1/1/2/3;
+}
 
+#img-conoce{
+    grid-area: 2/1/3/2;
+    padding: 3px;
 
+}
+#img-conoce div{
+    height: 200px;
+    display: flex;
+    margin: 60px 0;
+}
 
+#nombres-conoce{
+    grid-area: 2/2/3/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#img-conoce div img{
+    width: 90%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
 
-
-
-
-
-
+/**/
+#section-galeria{
+    min-height:100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(6,200px);
+    padding: 10px;
+    gap: 10px;
+}
+#section-galeria div{
+    overflow: hidden;
+}
+#section-galeria div img{
+    width: 100%;
+    object-fit:contain;
+   border-radius: 10px;
+}
 @media(max-width:450px){
     nav{
         display: none;
