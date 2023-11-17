@@ -69,6 +69,7 @@ nav a:hover{
     margin-bottom: 20px;
     letter-spacing: 2px;
     color: rgb(119, 91, 53);
+    text-align: center;
 }
 /**/
 #section-acerca{
@@ -78,13 +79,12 @@ nav a:hover{
     flex-direction: column;
 }
 #txt-acerca{
-    height: 70%;
+    min-height: 70%;
     order:1;
-
     text-overflow: ellipsis;
 }
 #img-acerca{
-    height: 30%;
+    min-height: 30%;
     padding: 10px;
     order:2;  
     text-align: center;
@@ -92,7 +92,6 @@ nav a:hover{
 #img-acerca img{
     width: 50%;
     max-width:100% ;
-    max-height: 100%;
 }
 /**/
 #section-conoce{
@@ -105,6 +104,9 @@ nav a:hover{
 }
 #subtitulo-conoce{
     grid-area: 1/1/2/3;
+}
+.subtitulo.no-margin{
+    margin: 0%;
 }
 
 #img-conoce{
@@ -147,8 +149,132 @@ nav a:hover{
     object-fit:contain;
    border-radius: 10px;
 }
-@media(max-width:450px){
+/**/
+#section-paseos{
+    font-size: 14px;
+    min-height: 100vh;
+    height: 100vh;
+    position: relative;
+}
+#section-paseos video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#section-paseos #txt-paseos{
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(255, 254, 254, 0.527);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    width: 90%;
+    min-height: 60%;
+}
+/**/
+#section-enfermedades{
+    min-height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#img-enfermedades img{
+    width: 70%;
+}
+#img-enfermedades{
+    text-align: center;
+}
+#section-enfermedades div p {
+    text-align:justify;
+}
+footer{
+    font-size: 12px;
+    background-color: rgb(24, 199, 36);
+    min-height: 100px;
+    padding: 15px;
+}
+#social{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+#social div{
+    width: 30%;
+    text-align: center;
+}
+#social div img{
+    
+    min-width: 20%;
+   max-width: 30px;
+}
+#txt-footer{
+    margin-top: 15px;
+}
+@media(max-width:620px){
     nav{
         display: none;
     }
+}
+
+@media(min-width:750px){
+    #section-acerca{
+       flex-direction: row;
+    }
+    .contenedor-mitad{
+        width: 50%;    
+    }
+    #img-acerca{
+        order: 1;
+        display: grid;
+        place-items: center;
+    }
+    #txt-acerca .txt-center.txt-left{
+        text-align: left;
+        order: 2;
+    }
+    /**/
+    #section-conoce{
+        min-height: 100vh;
+        padding: 10px;
+        display: flex;
+        
+        
+    }
+    #subtitulo-conoce{
+        grid-area: 1/1/2/3;
+    }
+    .subtitulo.no-margin{
+        margin: 0%;
+    }
+    
+    #img-conoce{
+        grid-area: 2/1/3/2;
+        padding: 3px;
+    
+    }
+    #img-conoce div{
+        height: 200px;
+        display: flex;
+        margin: 60px 0;
+    }
+    
+    #nombres-conoce{
+        grid-area: 2/2/3/3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #img-conoce div img{
+        width: 90%;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+    
 }
