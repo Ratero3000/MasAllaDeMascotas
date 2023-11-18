@@ -99,7 +99,7 @@ nav a:hover{
 }
 /**/
 #section-conoce{
-    min-height:90vh;
+    min-height:100vh;
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -302,6 +302,11 @@ footer{
     height: 100%;
     object-fit:cover;
 }
+/**/
+#section-paseos{
+    font-size: 16px;
+    
+}
 /*--------------------------------*/
 #section-enfermedades{
     display: grid;
@@ -309,7 +314,6 @@ footer{
     grid-template-rows: 60px auto auto auto auto;
     row-gap: 30px;
     column-gap: 15px;
-  
 }
 
 #subtitulo-enfermedades{
@@ -327,4 +331,34 @@ footer{
     justify-content: center;
     
 }
+}
+
+@media(max-width:400px){
+    #txt-inicio h1{
+        font-size: 50px;
+        letter-spacing: 1vw;
+        padding: 0px;
+    }
+    #txt-inicio h2{
+        font-size: 25px;
+        letter-spacing: 1vw;
+    }
+    /**/
+    #section-conoce{
+        grid-template-rows: 10% 90%;
+        min-height: 160vh;      
+    }
+    
+    #img-conoce div{
+        min-height: 180px;
+    }
+}
+@media(max-width:338px){
+    #section-conoce{
+        grid-template-rows: 18% 88%;
+         min-height: 200vh;    
+    }
+    #img-conoce div{
+        max-height: 250px;
+    }
 }
